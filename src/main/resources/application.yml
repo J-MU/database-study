@@ -1,8 +1,24 @@
 spring:
-  jooq:
-    sql-dialect: MySQL
+  profiles:
+    active: local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
   datasource:
-    url: ${URL}
-    username: ${USERNAME}
-    password: ${PASSWORD}
+    url: jdbc:mysql://localhost:3306/db_study
+    username: root
+    password: 1234
     driverClassName: com.mysql.cj.jdbc.Driver
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+  datasource:
+    url: jdbc:mysql://localhost:3306/test_db
+    username: root
+    password: 1234

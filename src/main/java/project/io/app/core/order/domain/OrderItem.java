@@ -1,10 +1,13 @@
 package project.io.app.core.order.domain;
 
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import project.io.app.core.common.BaseEntity;
 
 import java.util.Objects;
 
+@NoArgsConstructor
 @Getter
 public class OrderItem extends BaseEntity {
     private Long id;
@@ -15,7 +18,8 @@ public class OrderItem extends BaseEntity {
     private OrderItem() {
     }
 
-    public OrderItem(
+    @Builder
+    private OrderItem(
         final Long id,
         final Long orderId,
         final Long productId,
