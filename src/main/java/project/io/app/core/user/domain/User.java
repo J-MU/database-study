@@ -1,5 +1,6 @@
 package project.io.app.core.user.domain;
 
+import lombok.Builder;
 import lombok.Getter;
 import project.io.app.core.common.BaseEntity;
 
@@ -17,21 +18,7 @@ public class User extends BaseEntity {
     private User() {
     }
 
-    public User(
-        final Long id,
-        final String name,
-        final String nickname,
-        final Gender gender,
-        final Long countryId
-    ) {
-        this(id, name, nickname, gender, countryId, null);
-        this.id = id;
-        this.name = name;
-        this.nickname = nickname;
-        this.gender = gender;
-        this.countryId = countryId;
-    }
-
+    @Builder
     private User(
         final Long id,
         final String name,

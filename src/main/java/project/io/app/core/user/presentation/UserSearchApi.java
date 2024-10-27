@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import project.io.app.core.user.domain.UserEntityReadRepository;
+import project.io.app.core.user.domain.repository.UserEntityReadRepository;
 
 @RestController
 @RequiredArgsConstructor
